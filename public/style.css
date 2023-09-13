@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.options-container{
+    width: 4.3rem;
+    height: 4.3rem;
+    background-color: #dfe4ea;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.tools-container{
+   display: flex;
+   justify-content: space-around;
+   height: 5rem;
+   width: 55vw;
+   position: absolute;
+   top: 1rem;
+   left: 25vw;
+   background-color: #f5f6fa;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.tools-container > *{
+    width: 4rem;
+}
+
+.pencil-modify-container{
+    background-color: #f5f6fa;
+    width: 7rem;
+    height: 5rem;
+    position: absolute;
+    top: 6rem;
+    left: 25vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 2px;
+    display: none;
+}
+
+.pencil-width-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.3rem;
+}
+
+.pencil-width-container input{
+    width: 80%;
+}
+
+.pencil-color-container{
+    height: calc(100% - 2.3rem);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pencil-color{
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+}
+
+.black{
+    background-color: black;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.eraser-modify-container{
+    width: 7rem;
+    height: 2.3rem;
+    position: absolute;
+    top: 6rem;
+    left: 33vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f6fa;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+}
+
+.eraser-modify-container input{
+    width: 80%;
+}
+
+.scale-tools{
+    animation-name: scale-tools;
+    animation-duration: 0.7s;
+}
+
+@keyframes scale-tools{
+    0%{
+        transform: scale(0);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.note-container{
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    top: 15rem;
+    left: 10rem;
+}
+
+.note-header{
+    background-color: #f1f2f6;
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.note-header > *{
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.minimize{
+    background-color: #2ed573;
+}
+
+.remove{
+    background-color: #ff6b6b;
+}
+
+.note-content{
+    height: calc(100% - 2rem);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.note-content textarea{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.note-content img{
+    width: 100%;
+    height: 100%;
+}
